@@ -80,6 +80,7 @@
     gap: 20px;
     align-items: start;
     margin-bottom: 26px;
+    position: relative;
   }
 
   .placeholder {
@@ -107,7 +108,13 @@
   }
   .pbt-address { font-size: 11px; text-align: center; color: #333; margin-top: 2px; margin-bottom: -8px; }
 
-  .title { padding-top: 40px; }
+  .title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 40px;
+  }
   .title h1 {
     white-space: nowrap;
     font-family: "Roboto Condensed", sans-serif;
@@ -116,8 +123,9 @@
     line-height: 1.02;
     color: var(--navy);
     letter-spacing: -0.5px;
+    text-align: center;
   }
-  .title-row { display: flex; align-items: flex-end; gap: 22px; margin-top: 30px; }
+  .title-row { display: flex; align-items: flex-end; justify-content: center; gap: 22px; margin-top: 30px; }
   .year {
     display: flex;
     align-items: center;
@@ -129,7 +137,7 @@
     color: var(--red);
     letter-spacing: -1px;
   }
-  .kfl { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; margin-left: auto; }
+  .kfl { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
   .kfl-logo { width: 150px; height: 50px; object-fit: contain; }
   .kfl-caption {
     font-family: "Roboto Condensed", sans-serif;
@@ -139,7 +147,7 @@
     letter-spacing: 0.5px;
   }
 
-  .photo { width: 130px; height: 190px; border-radius: 8px; margin-top: 12px; margin-left: 0; }
+  .photo { grid-column: 3; width: 130px; height: 190px; border-radius: 8px; margin-top: 12px; margin-left: 0; }
 
   /* ================= FIELDS ================= */
   .label {
